@@ -135,7 +135,7 @@ public class ForecastFragment extends Fragment implements LoaderCallbacks<Cursor
         // Get a reference to the ListView, and attach this adapter to it.
         mListView = (ListView) rootView.findViewById(R.id.listview_forecast);
         // TO DO 5
-
+        mListView.setAdapter(mForecastAdapter);
         // TO DO 5 END
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -244,7 +244,7 @@ public class ForecastFragment extends Fragment implements LoaderCallbacks<Cursor
         mUseTodayLayout = useTodayLayout;
         if (mForecastAdapter != null) {
             // TO DO 6
-
+            mForecastAdapter.setUseTodayLayout(useTodayLayout);
             // TO DO 6 END
         }
     }

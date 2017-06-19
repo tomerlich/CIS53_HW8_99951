@@ -121,7 +121,7 @@ public class ForecastAdapter extends CursorAdapter {
     @Override
     public int getItemViewType(int position) {
         // TO DO 3
-        int type = -1;
+        int type = (position == 0 && mUseTodayLayout) ? VIEW_TYPE_TODAY : VIEW_TYPE_FUTURE_DAY;
         // TO DO 3 END
         return type;
     }
@@ -129,7 +129,7 @@ public class ForecastAdapter extends CursorAdapter {
     @Override
     public int getViewTypeCount() {
         // TO DO 4
-        return 0;
+        return 2;
         // TO DO 4 END
     }
 }
